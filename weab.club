@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/jwu/www/weab.club;
+
+        index index.html;
+
+        server_name weab.club www.weab.club;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
